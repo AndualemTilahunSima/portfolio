@@ -1,0 +1,155 @@
+:root {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+body{
+    margin: 0rem;
+    padding: 0rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "nav section"
+        "footer footer";
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    grid-area: header;
+    background-color: #172236;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-bottom: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+h3 {
+    margin-bottom: 0rem;
+}
+
+.external-links a {
+    margin-right: 1rem;
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    grid-area: nav;
+    background-color: #1c293c;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+}
+
+.nav-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.logo {
+    width: 10.12rem;
+    height: 10.12rem;
+    border-radius: 50%;
+    background-color: #3c4d6a;
+}
+
+.profile-name {
+    text-align: center;
+    color: white;
+}
+
+.quick-info {
+    width: 100%;
+    height: 10.12rem;
+    border-radius: 5%;
+    background-color: #324158;
+    margin-top: 2rem;
+    padding-left: 1rem;
+}
+
+.quick-info ul {
+    list-style-type: none;
+    padding-left: 0rem;
+    color: white;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding-left: 0rem;
+    color: white;
+}
+
+.menu ul li {
+    margin-bottom: 1rem;
+}
+
+
+section {
+    grid-area: section;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    color: black;
+
+}
+
+.content{
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: #e6e8ec 0px 0.2rem 0.3rem;
+    margin-bottom: 1rem;
+}
+
+.content-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.content-header ul {
+    padding-left: 1rem;
+
+}
+
+.content-header ul li{
+    margin-bottom: 1rem;
+    
+}
+
+
+footer {
+    grid-area: footer;
+    background-color: #172236;
+    padding-left: 10rem;
+    padding-right: 10rem;
+
+}
+
+hr{
+    border: 0.5px solid #324158;
+}
+
+.footer-profile{
+    width: 26rem;
+}
+
+.copyright {
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
