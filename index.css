@@ -1,11 +1,9 @@
 :root {
-    width: 100vw;
-    height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
 }
 
-body{
+body {
     margin: 0rem;
     padding: 0rem;
 }
@@ -18,16 +16,16 @@ main {
         "header header"
         "nav section"
         "footer footer";
-    height: 100%;
     margin: 0;
     padding: 0;
+    height: 100vh;
 }
 
 header {
     grid-area: header;
     background-color: #172236;
     padding-left: 10rem;
-    padding-right: 10rem;
+    padding-right: 2rem;
     padding-bottom: 1.3rem;
     display: flex;
     justify-content: space-between;
@@ -94,7 +92,13 @@ nav {
 }
 
 .menu ul li {
-    margin-bottom: 1rem;
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.menu ul li:hover {
+    background-color: grey;
 }
 
 
@@ -103,11 +107,11 @@ section {
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 1rem;
-    color: black;
-
+    color: #314158;
+    overflow-y: auto;
 }
 
-.content{
+.content {
     background-color: #ffffff;
     border-radius: 1rem;
     padding: 2rem;
@@ -115,22 +119,105 @@ section {
     margin-bottom: 1rem;
 }
 
-.content-header{
+.content-header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 2rem;
 }
 
-.content-header ul {
+.video-container {
+    border: 1px dashed grey;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem 0rem;
+    background-color: #f9fafc;
+}
+
+.video-upload {
+    border-radius: 0.5rem;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+}
+
+.experiance-list {
     padding-left: 1rem;
 
 }
 
-.content-header ul li{
+.experiance-list li {
     margin-bottom: 1rem;
-    
 }
 
+.education-list {
+    list-style-type: none;
+    padding-left: 0rem !important;
+}
+
+.featured-projects,
+.certification-awards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.featured-projects>div,
+.certification-awards>div {
+    width: 28.4rem;
+}
+
+.tech-stack {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0rem;
+    margin: 0rem;
+}
+
+.tech-stack li {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0.1rem 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.certification-awards button {
+    display: flex;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-top: 3rem;
+    border: 1px solid grey;
+    background-color: white;
+    justify-content: space-between;
+}
+
+.certification-awards button:hover {
+    background-color: lightgrey;
+}
+
+.certification-awards .content-header a {
+    display: none;
+}
+
+
+iframe {
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    border: 1px solid lightgray;
+    display: none;
+}
+
+
+.content-footer a {
+    text-decoration: none;
+}
 
 footer {
     grid-area: footer;
@@ -140,11 +227,11 @@ footer {
 
 }
 
-hr{
+hr {
     border: 0.5px solid #324158;
 }
 
-.footer-profile{
+.footer-profile {
     width: 26rem;
 }
 
@@ -152,4 +239,94 @@ hr{
     color: white;
     text-align: center;
     padding: 1rem;
+}
+
+
+.modal-wrapper {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+
+.modal {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease;
+    width: 40rem;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-content {
+    margin-top: 1rem;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input{
+    padding: 0.6rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: #f3f3f5;
+}
+
+input:focus {
+    border-color: lightgray;
+    box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.3);
+}
+
+.modal-footer {
+    text-align: right;
+}
+
+.modal-footer button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+}
+.form-error {
+    color: red;
+    display: none;
+    margin-top: 0.5rem;
+}
+
+
+/* Close button */
+.close-btn {
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }

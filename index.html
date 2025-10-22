@@ -3,6 +3,10 @@
 <head>
     <title>Portfolio</title>
     <link rel="stylesheet" href="index.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./index.js">
+    </script>
 </head>
 
 <body>
@@ -46,11 +50,11 @@
             </div>
         </nav>
         <section>
+
             <div>
                 <h2>About Me</h2>
                 <hr />
                 <div class="content">
-                    <div class="content-header"></div>
                     <div class="content-body">
                         <article>
                             Passionate Full Stack Developer with 8+ years of experience in designing and developing
@@ -62,6 +66,25 @@
                             adapting
                             to new technologies to stay at the forefront of web development.
                         </article>
+                    </div>
+                    <div class="content-footer">
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2>Introduction Video</h2>
+                <hr />
+                <div class="content">
+                    <div class="content-body">
+                        <div class="video-container">
+                            <span>Upload a short introduction video here.</span>
+                            <span>MP4, WebM, or OGG format</span>
+                            <div>
+                                <label for="video-upload" class="video-upload">Choose Video File</label>
+                                <input id="video-upload" type="file" accept="video/*" hidden />
+                            </div>
+                        </div>
                     </div>
                     <div class="content-footer">
                     </div>
@@ -82,7 +105,7 @@
                         </div>
                     </div>
                     <div class="content-body">
-                        <ul>
+                        <ul class="experiance-list">
                             <li>Led development of enterprise-scale web applications serving 100K+ users</li>
                             <li>Implemented microservices architecture reducing system downtime by 40%</li>
                             <li>Mentored team of 5 junior developers, improving code quality and delivery speed</li>
@@ -93,7 +116,6 @@
                     </div>
                 </div>
             </div>
-
 
             <div>
                 <h2>Education</h2>
@@ -109,7 +131,7 @@
                         </div>
                     </div>
                     <div class="content-body">
-                        <ul>
+                        <ul class="education-list">
                             <li>Focus: Software Engineering and Distributed Systems</li>
                             <li>GPA: 3.8/4.0</li>
                         </ul>
@@ -128,7 +150,7 @@
                         </div>
                     </div>
                     <div class="content-body">
-                        <ul>
+                        <ul class="education-list">
                             <li>Honors Graduate</li>
                             <li>GPA: 3.7/4.0</li>
                         </ul>
@@ -137,6 +159,290 @@
                     </div>
                 </div>
             </div>
+
+            <div>
+                <h2>Featured Projects</h2>
+                <hr />
+                <div class="featured-projects">
+                    <div class="content ">
+                        <div class="content-header">
+                            <div>
+                                <h3>E-Commerce Platform</h3>
+                            </div>
+                        </div>
+                        <div class="content-body">
+                            <p>
+                                A full-featured e-commerce platform with real-time inventory management,
+                                payment processing, and order tracking.
+                                Handles 50K+ daily transactions.
+                            </p>
+
+                            <ul class="tech-stack">
+                                <li>React</li>
+                                <li>Node.js</li>
+                                <li>MongoDB</li>
+                                <li>AWS</li>
+                            </ul>
+                        </div>
+                        <div class="content-footer">
+                            <a href="#">View Project -></a>
+                        </div>
+                    </div>
+                    <div class="content ">
+                        <div class="content-header">
+                            <div>
+                                <h3>Task Management Dashboard</h3>
+                            </div>
+                        </div>
+                        <div class="content-body">
+                            <p>
+                                Collaborative task management tool with real-time updates, team chat, and advanced
+                                analytics.
+                                Used by 200+ companies worldwide.
+                            </p>
+
+                            <ul class="tech-stack">
+                                <li>Next.js</li>
+                                <li>TypeScript</li>
+                                <li>Socket.io</li>
+                                <li>MongoDB</li>
+                            </ul>
+                        </div>
+                        <div class="content-footer">
+                            <a href="#">View Project -></a>
+                        </div>
+                    </div>
+                    <div class="content ">
+                        <div class="content-header">
+                            <div>
+                                <h3>Social Media Analytics</h3>
+                            </div>
+                        </div>
+                        <div class="content-body">
+                            <p>
+                                Analytics dashboard for social media managers to track engagement, sentiment analysis,
+                                and campaign performance across multiple platforms.
+                            </p>
+
+                            <ul class="tech-stack">
+                                <li>React</li>
+                                <li>Python</li>
+                                <li>TensorFlow</li>
+                                <li>AWS</li>
+                            </ul>
+                        </div>
+                        <div class="content-footer">
+                            <a href="#">View Project -></a>
+                        </div>
+                    </div>
+                    <div class="content ">
+                        <div class="content-header">
+                            <div>
+                                <h3>Healthcare Management System</h3>
+                            </div>
+                        </div>
+                        <div class="content-body">
+                            <p>
+                                HIPAA-compliant healthcare management system for patient records, appointments, and
+                                billing.
+                                Deployed across 15+ medical facilities.
+                            </p>
+
+                            <ul class="tech-stack">
+                                <li>Next.js</li>
+                                <li>PostgreSQL</li>
+                                <li>AWS</li>
+                                <li>HIPAA</li>
+                            </ul>
+                        </div>
+                        <div class="content-footer">
+                            <a href="#">View Project -></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2>Certifications & Awards</h2>
+                <hr />
+                <div class="certification-awards">
+                    <div class="content" onpointerenter="showEditIcon('01')" onpointerleave="hideEditIcon('01')">
+                        <div class="content-header">
+                            <div>
+                                <h3><script>document.write(getCertificationById("01").certTitle);</script></h3>
+                            </div>
+                            <a id="edit-01" onclick="onEditClicked('01')" href="#">
+                                <ion-icon name="pencil-outline"></ion-icon>
+                            </a>
+                        </div>
+                        <div class="content-body">
+                            <div>
+                                <span>
+                                    <script>document.write(getCertificationById("01").certIssuer);</script>
+                                    -
+                                    <script>document.write(getCertificationById("01").certYear);</script>
+                                </span>
+                            </div>
+                            <div>
+                                <button id="toggleBtn" onclick="toggleCertificate('01')">
+                                    <span id="toggleText-01">
+                                        <ion-icon id="toggleIcon-01" name="chevron-down-outline"></ion-icon>
+                                        View Certification
+                                    </span>
+                                    <ion-icon name="exit-outline"></ion-icon>
+                                </button>
+
+                                <iframe id="certificateFrame-01"
+                                    src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+                                    title="Sample Certificate"></iframe>
+                            </div>
+                        </div>
+                        <div class="content-footer">
+                        </div>
+                    </div>
+                    <div class="content" onpointerenter="showEditIcon('02')" onpointerleave="hideEditIcon('02')">
+                        <div class="content-header">
+                            <div>
+                                <h3><script>document.write(getCertificationById("02").certTitle);</script></h3>
+                            </div>
+                            <a id="edit-02" onclick="onEditClicked('02')" href="#">
+                                <ion-icon name="pencil-outline"></ion-icon>
+                            </a>
+                        </div>
+                        <div class="content-body">
+                            <div>
+                                <span>
+                                    <script>document.write(getCertificationById("02").certIssuer);</script>
+                                    -
+                                    <script>document.write(getCertificationById("02").certYear);</script>
+                                </span>
+                            </div>
+                            <div>
+                                <button id="toggleBtn" onclick="toggleCertificate('02')">
+                                    <span id="toggleText-02">
+                                        <ion-icon id="toggleIcon-02" name="chevron-down-outline"></ion-icon>
+                                        View Certification
+                                    </span>
+                                    <ion-icon name="exit-outline"></ion-icon>
+                                </button>
+
+                                <iframe id="certificateFrame-02"
+                                    src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+                                    title="Sample Certificate"></iframe>
+                            </div>
+                        </div>
+                        <div class="content-footer">
+                        </div>
+                    </div>
+                    <div class="content" onpointerenter="showEditIcon('03')" onpointerleave="hideEditIcon('03')">
+                        <div class="content-header">
+                            <div>
+                                <h3><script>document.write(getCertificationById("03").certTitle);</script></h3>
+                            </div>
+                            <a id="edit-03" onclick="onEditClicked('03')" href="#">
+                                <ion-icon name="pencil-outline"></ion-icon>
+                            </a>
+                        </div>
+                        <div class="content-body">
+                            <div>
+                                <span>
+                                    <script>document.write(getCertificationById("03").certIssuer);</script>
+                                    -
+                                    <script>document.write(getCertificationById("03").certYear);</script>
+                                </span>
+                            </div>
+                            <div>
+                                <button id="toggleBtn" onclick="toggleCertificate('03')">
+                                    <span id="toggleText-03">
+                                        <ion-icon id="toggleIcon-03" name="chevron-down-outline"></ion-icon>
+                                        View Certification
+                                    </span>
+                                    <ion-icon name="exit-outline"></ion-icon>
+                                </button>
+
+                                <iframe id="certificateFrame-03"
+                                    src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+                                    title="Sample Certificate"></iframe>
+                            </div>
+
+                        </div>
+                        <div class="content-footer">
+                        </div>
+                    </div>
+                    <div class="content" onpointerenter="showEditIcon('04')" onpointerleave="hideEditIcon('04')">
+                        <div class="content-header">
+                            <div>
+                                <h3><script>document.write(getCertificationById("04").certTitle);</script></h3>
+                            </div>
+                            <a id="edit-04" onclick="onEditClicked('04')" href="#">
+                                <ion-icon name="pencil-outline"></ion-icon>
+                            </a>
+                        </div>
+                        <div class="content-body">
+                            <div>
+                                <span>
+                                    <script>document.write(getCertificationById("04").certIssuer);</script>
+                                    -
+                                    <script>document.write(getCertificationById("04").certYear);</script>
+                                </span>
+                            </div>
+                            <div>
+                                <button id="toggleBtn" onclick="toggleCertificate('04')">
+                                    <span id="toggleText-04">
+                                        <ion-icon id="toggleIcon-04" name="chevron-down-outline"></ion-icon>
+                                        View Certification
+                                    </span>
+                                    <ion-icon name="exit-outline"></ion-icon>
+                                </button>
+
+                                <iframe id="certificateFrame-04"
+                                    src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+                                    title="Sample Certificate"></iframe>
+                            </div>
+                        </div>
+                        <div class="content-footer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="myModalWrapper" class="modal-wrapper">
+                <div class="modal">
+                    <div class="modal-header">
+                        <h3>Edit Certification</h3>
+                        <a onclick="closeModal()" href="#"><span class="close-btn">&times;</span></a>
+                    </div>
+                    <hr />
+                    <div class="modal-content">
+                        <form id="certificationForm">
+                            <label for="certTitle">Certification Title:</label>
+                            <input type="text" id="certTitle" name="certTitle" class="form-control" required
+                                placeholder="Enter certification title" />
+
+                            <label for="certIssuer">Issuing Organization:</label>
+                            <input type="text" id="certIssuer" name="certIssuer" required
+                                placeholder="Enter issuing organization" />
+
+                            <label for="certYear">Year</label>
+                            <input type="text" id="certYear" name="certYear" required placeholder="Enter year" />
+
+                            <label for="certUrl">Certification URL (Optional)</label>
+                            <input type="text" id="certUrl" name="certUrl"
+                                placeholder="https://example.com/certification" />
+                            <label>External link to view the certification</label>
+                        </form>
+                        <span id="formError" class="form-error">
+                            Please fill out all required fields correctly.
+                        </span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" onclick="closeModal()">Cancel</button>
+                        <button type="button" onclick="onSaveChanges()">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
         <footer>
