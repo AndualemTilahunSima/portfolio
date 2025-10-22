@@ -71,7 +71,6 @@ nav {
 }
 
 .quick-info {
-    width: 100%;
     height: 10.12rem;
     border-radius: 5%;
     background-color: #324158;
@@ -93,12 +92,12 @@ nav {
 
 .menu ul li {
     color: #ffffff;
-    padding: 1rem;
+    padding: 1rem 0rem 1rem 1rem;
     border-radius: 0.5rem;
 }
 
 .menu ul li:hover {
-    background-color: grey;
+    background-color: #0000001a
 }
 
 
@@ -115,7 +114,7 @@ section {
     background-color: #ffffff;
     border-radius: 1rem;
     padding: 2rem;
-    box-shadow: #e6e8ec 0px 0.2rem 0.3rem;
+    border: 1.5px solid #e6e8ec;
     margin-bottom: 1rem;
 }
 
@@ -144,6 +143,10 @@ section {
     padding: 0.5rem 1rem;
 }
 
+#videoPlayer {
+    width: 20rem;
+}
+
 .experiance-list {
     padding-left: 1rem;
 
@@ -167,7 +170,7 @@ section {
 
 .featured-projects>div,
 .certification-awards>div {
-    width: 28.4rem;
+    width: 28rem;
 }
 
 .tech-stack {
@@ -203,6 +206,16 @@ section {
 
 .certification-awards .content-header a {
     display: none;
+}
+
+.edit-link {
+    padding: 0.6rem;
+}
+
+.edit-link:hover {
+    border: 0;
+    background-color: #f3f3f5;
+    border-radius: 0.25rem;
 }
 
 
@@ -246,8 +259,8 @@ hr {
     display: none;
     position: fixed;
     z-index: 1000;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
@@ -263,6 +276,7 @@ hr {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
     animation: fadeIn 0.3s ease;
     width: 40rem;
+    color: #314158;
 }
 
 .modal-header {
@@ -280,7 +294,7 @@ hr {
     gap: 1rem;
 }
 
-input{
+input {
     padding: 0.6rem;
     border: none;
     border-radius: 0.25rem;
@@ -296,7 +310,8 @@ input:focus {
     text-align: right;
 }
 
-.modal-footer button {
+
+.save-button {
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 0.25rem;
@@ -304,10 +319,26 @@ input:focus {
     color: white;
     cursor: pointer;
 }
+
+.cancel-button {
+    padding: 0.5rem 1rem;
+    border: 0.1px solid #0000001a;
+    border-radius: 0.25rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+.cancel-button:hover {
+    background-color: #0000001a
+}
+
 .form-error {
     color: red;
     display: none;
     margin-top: 0.5rem;
+}
+a{
+    cursor: pointer;
 }
 
 

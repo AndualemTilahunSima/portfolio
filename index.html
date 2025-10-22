@@ -82,7 +82,10 @@
                             <span>MP4, WebM, or OGG format</span>
                             <div>
                                 <label for="video-upload" class="video-upload">Choose Video File</label>
-                                <input id="video-upload" type="file" accept="video/*" hidden />
+                                <input id="video-upload" type="file" accept="video/*" hidden onchange="onFileChange(event)"/>
+                            </div>
+                            <div>
+                                <video id="videoPlayer" controls></video>
                             </div>
                         </div>
                     </div>
@@ -269,9 +272,11 @@
                     <div class="content" onpointerenter="showEditIcon('01')" onpointerleave="hideEditIcon('01')">
                         <div class="content-header">
                             <div>
-                                <h3><script>document.write(getCertificationById("01").certTitle);</script></h3>
+                                <h3>
+                                    <script>document.write(getCertificationById("01").certTitle);</script>
+                                </h3>
                             </div>
-                            <a id="edit-01" onclick="onEditClicked('01')" href="#">
+                            <a id="edit-01" onclick="onEditClicked('01')" class="edit-link">
                                 <ion-icon name="pencil-outline"></ion-icon>
                             </a>
                         </div>
@@ -289,11 +294,11 @@
                                         <ion-icon id="toggleIcon-01" name="chevron-down-outline"></ion-icon>
                                         View Certification
                                     </span>
-                                    <ion-icon name="exit-outline"></ion-icon>
+                                    <ion-icon name="open-outline"></ion-icon>
                                 </button>
 
                                 <iframe id="certificateFrame-01"
-                                    src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+                                    src="https://pages.awscloud.com/rs/112-TZM-766/images/HK%20TW%20get%20cert%20program%20Mar%20-%20Seven%20Badges-updated%202025.png?version=1"
                                     title="Sample Certificate"></iframe>
                             </div>
                         </div>
@@ -303,9 +308,11 @@
                     <div class="content" onpointerenter="showEditIcon('02')" onpointerleave="hideEditIcon('02')">
                         <div class="content-header">
                             <div>
-                                <h3><script>document.write(getCertificationById("02").certTitle);</script></h3>
+                                <h3>
+                                    <script>document.write(getCertificationById("02").certTitle);</script>
+                                </h3>
                             </div>
-                            <a id="edit-02" onclick="onEditClicked('02')" href="#">
+                            <a id="edit-02" onclick="onEditClicked('02')" class="edit-link">
                                 <ion-icon name="pencil-outline"></ion-icon>
                             </a>
                         </div>
@@ -323,7 +330,7 @@
                                         <ion-icon id="toggleIcon-02" name="chevron-down-outline"></ion-icon>
                                         View Certification
                                     </span>
-                                    <ion-icon name="exit-outline"></ion-icon>
+                                    <ion-icon name="open-outline"></ion-icon>
                                 </button>
 
                                 <iframe id="certificateFrame-02"
@@ -337,9 +344,11 @@
                     <div class="content" onpointerenter="showEditIcon('03')" onpointerleave="hideEditIcon('03')">
                         <div class="content-header">
                             <div>
-                                <h3><script>document.write(getCertificationById("03").certTitle);</script></h3>
+                                <h3>
+                                    <script>document.write(getCertificationById("03").certTitle);</script>
+                                </h3>
                             </div>
-                            <a id="edit-03" onclick="onEditClicked('03')" href="#">
+                            <a id="edit-03" onclick="onEditClicked('03')"  class="edit-link">
                                 <ion-icon name="pencil-outline"></ion-icon>
                             </a>
                         </div>
@@ -357,7 +366,7 @@
                                         <ion-icon id="toggleIcon-03" name="chevron-down-outline"></ion-icon>
                                         View Certification
                                     </span>
-                                    <ion-icon name="exit-outline"></ion-icon>
+                                    <ion-icon name="open-outline"></ion-icon>
                                 </button>
 
                                 <iframe id="certificateFrame-03"
@@ -372,9 +381,11 @@
                     <div class="content" onpointerenter="showEditIcon('04')" onpointerleave="hideEditIcon('04')">
                         <div class="content-header">
                             <div>
-                                <h3><script>document.write(getCertificationById("04").certTitle);</script></h3>
+                                <h3>
+                                    <script>document.write(getCertificationById("04").certTitle);</script>
+                                </h3>
                             </div>
-                            <a id="edit-04" onclick="onEditClicked('04')" href="#">
+                            <a id="edit-04" onclick="onEditClicked('04')" class="edit-link">
                                 <ion-icon name="pencil-outline"></ion-icon>
                             </a>
                         </div>
@@ -392,7 +403,7 @@
                                         <ion-icon id="toggleIcon-04" name="chevron-down-outline"></ion-icon>
                                         View Certification
                                     </span>
-                                    <ion-icon name="exit-outline"></ion-icon>
+                                    <ion-icon name="open-outline"></ion-icon>
                                 </button>
 
                                 <iframe id="certificateFrame-04"
@@ -407,41 +418,7 @@
             </div>
 
 
-            <div id="myModalWrapper" class="modal-wrapper">
-                <div class="modal">
-                    <div class="modal-header">
-                        <h3>Edit Certification</h3>
-                        <a onclick="closeModal()" href="#"><span class="close-btn">&times;</span></a>
-                    </div>
-                    <hr />
-                    <div class="modal-content">
-                        <form id="certificationForm">
-                            <label for="certTitle">Certification Title:</label>
-                            <input type="text" id="certTitle" name="certTitle" class="form-control" required
-                                placeholder="Enter certification title" />
 
-                            <label for="certIssuer">Issuing Organization:</label>
-                            <input type="text" id="certIssuer" name="certIssuer" required
-                                placeholder="Enter issuing organization" />
-
-                            <label for="certYear">Year</label>
-                            <input type="text" id="certYear" name="certYear" required placeholder="Enter year" />
-
-                            <label for="certUrl">Certification URL (Optional)</label>
-                            <input type="text" id="certUrl" name="certUrl"
-                                placeholder="https://example.com/certification" />
-                            <label>External link to view the certification</label>
-                        </form>
-                        <span id="formError" class="form-error">
-                            Please fill out all required fields correctly.
-                        </span>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" onclick="closeModal()">Cancel</button>
-                        <button type="button" onclick="onSaveChanges()">Save Changes</button>
-                    </div>
-                </div>
-            </div>
 
         </section>
 
@@ -455,6 +432,42 @@
                 &copy; 2025 Andualem Tilahun. All rights reserved.
             </div>
         </footer>
+        <div id="myModalWrapper" class="modal-wrapper">
+            <div class="modal">
+                <div class="modal-header">
+                    <h3>Edit Certification</h3>
+                    <a onclick="closeModal()"><span class="close-btn">&times;</span></a>
+                </div>
+                <hr />
+                <div class="modal-content">
+                    <form id="certificationForm">
+                        <label for="certTitle">Certification Title:</label>
+                        <input type="text" id="certTitle" name="certTitle" class="form-control" required
+                            placeholder="Enter certification title" />
+
+                        <label for="certIssuer">Issuing Organization:</label>
+                        <input type="text" id="certIssuer" name="certIssuer" required
+                            placeholder="Enter issuing organization" />
+
+                        <label for="certYear">Year</label>
+                        <input type="text" id="certYear" name="certYear" required placeholder="Enter year" />
+
+                        <label for="certUrl">Certification URL (Optional)</label>
+                        <input type="text" id="certUrl" name="certUrl"
+                            placeholder="https://example.com/certification" />
+                        <label>External link to view the certification</label>
+                    </form>
+                    <span id="formError" class="form-error">
+                        Please fill out all required fields correctly.
+                    </span>
+                </div>
+                <hr>
+                <div class="modal-footer">
+                    <button type="button" class="cancel-button" onclick="closeModal()">Cancel</button>
+                    <button type="button" class="save-button"onclick="onSaveChanges()">Save Changes</button>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 

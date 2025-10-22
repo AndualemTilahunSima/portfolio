@@ -117,4 +117,14 @@ function onSaveChanges() {
         localStorage.setItem("certifications", JSON.stringify(certifications));
     }
     closeModal();
+    location.reload();
+}
+
+function onFileChange(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const videoPlayer = document.getElementById('videoPlayer');
+        const fileURL = URL.createObjectURL(file);
+        videoPlayer.src = fileURL;
+    }
 }
