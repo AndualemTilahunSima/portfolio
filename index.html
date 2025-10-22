@@ -297,21 +297,20 @@
                                     <script>document.write(getCertificationById("01").certYear);</script>
                                 </span>
                             </div>
-                            <div>
-                                <button id="toggleBtn" onclick="toggleCertificate('01')">
-                                    <span id="toggleText-01">
-                                        <ion-icon id="toggleIcon-01" name="chevron-down-outline"></ion-icon>
-                                        View Certification
-                                    </span>
-                                    <ion-icon name="open-outline"></ion-icon>
-                                </button>
-                                <script>
-                                    document.write(`<iframe id="certificateFrame-01"
+                            <button id="toggleBtn" onclick="toggleCertificate('01')">
+                                <span id="toggleText-01">
+                                    <ion-icon id="toggleIcon-01" name="chevron-down-outline"></ion-icon>
+                                    View Certification
+                                </span>
+                                <ion-icon name="open-outline"></ion-icon>
+                            </button>
+
+                            <script>
+                                document.write(`<iframe id="certificateFrame-01"
                                         src="${getCertificationById("01").certUrl || 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf'}"
                                         title="Sample Certificate"></iframe>`)
-                                </script>
+                            </script>
 
-                            </div>
                         </div>
                         <div class="content-footer">
                         </div>
