@@ -97,7 +97,7 @@ nav {
 }
 
 .menu ul li:hover {
-    background-color: #0000001a
+    background-color: #324158;
 }
 
 
@@ -147,14 +147,20 @@ section {
     width: 20rem;
 }
 
-.experiance-list {
-    padding-left: 1rem;
-
+#work-experiance .tech-stack li {
+    background-color: #eceff2;
+    color: black;
+    
 }
 
-.experiance-list li {
+#work-experiance .content-body ul {
+    padding-left: 1rem;
+}
+
+#work-experiance .content-body ul li {
     margin-bottom: 1rem;
 }
+
 
 .education-list {
     list-style-type: none;
@@ -184,7 +190,7 @@ section {
 .tech-stack li {
     background-color: #000000;
     color: #ffffff;
-    padding: 0.1rem 1rem;
+    padding: 0.2rem 1rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
 }
@@ -337,7 +343,8 @@ input:focus {
     display: none;
     margin-top: 0.5rem;
 }
-a{
+
+a {
     cursor: pointer;
 }
 
