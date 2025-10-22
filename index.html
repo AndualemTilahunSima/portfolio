@@ -3,6 +3,8 @@
 <head>
     <title>Portfolio</title>
     <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="./index.js">
@@ -82,7 +84,8 @@
                             <span>MP4, WebM, or OGG format</span>
                             <div>
                                 <label for="video-upload" class="video-upload">Choose Video File</label>
-                                <input id="video-upload" type="file" accept="video/*" hidden onchange="onFileChange(event)"/>
+                                <input id="video-upload" type="file" accept="video/*" hidden
+                                    onchange="onFileChange(event)" />
                             </div>
                             <div>
                                 <video id="videoPlayer" controls></video>
@@ -116,12 +119,12 @@
                         </ul>
                     </div>
                     <div class="content-footer">
-                         <ul class="tech-stack">
-                                <li>React</li>
-                                <li>Node.js</li>
-                                <li>TypeScript</li>
-                                <li>AWS</li>
-                            </ul>
+                        <ul class="tech-stack">
+                            <li>React</li>
+                            <li>Node.js</li>
+                            <li>TypeScript</li>
+                            <li>AWS</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -302,10 +305,12 @@
                                     </span>
                                     <ion-icon name="open-outline"></ion-icon>
                                 </button>
+                                <script>
+                                    document.write(`<iframe id="certificateFrame-01"
+                                        src="${getCertificationById("01").certUrl || 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf'}"
+                                        title="Sample Certificate"></iframe>`)
+                                </script>
 
-                                <iframe id="certificateFrame-01"
-                                    src="https://pages.awscloud.com/rs/112-TZM-766/images/HK%20TW%20get%20cert%20program%20Mar%20-%20Seven%20Badges-updated%202025.png?version=1"
-                                    title="Sample Certificate"></iframe>
                             </div>
                         </div>
                         <div class="content-footer">
@@ -339,9 +344,11 @@
                                     <ion-icon name="open-outline"></ion-icon>
                                 </button>
 
-                                <iframe id="certificateFrame-02"
-                                    src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-                                    title="Sample Certificate"></iframe>
+                                <script>
+                                    document.write(`<iframe id="certificateFrame-02"
+                                        src="${getCertificationById("02").certUrl || 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf'}"
+                                        title="Sample Certificate"></iframe>`)
+                                </script>
                             </div>
                         </div>
                         <div class="content-footer">
@@ -354,7 +361,7 @@
                                     <script>document.write(getCertificationById("03").certTitle);</script>
                                 </h3>
                             </div>
-                            <a id="edit-03" onclick="onEditClicked('03')"  class="edit-link">
+                            <a id="edit-03" onclick="onEditClicked('03')" class="edit-link">
                                 <ion-icon name="pencil-outline"></ion-icon>
                             </a>
                         </div>
@@ -375,9 +382,11 @@
                                     <ion-icon name="open-outline"></ion-icon>
                                 </button>
 
-                                <iframe id="certificateFrame-03"
-                                    src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-                                    title="Sample Certificate"></iframe>
+                                <script>
+                                    document.write(`<iframe id="certificateFrame-03"
+                                        src="${getCertificationById("03").certUrl || 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf'}"
+                                        title="Sample Certificate"></iframe>`)
+                                </script>
                             </div>
 
                         </div>
@@ -412,9 +421,11 @@
                                     <ion-icon name="open-outline"></ion-icon>
                                 </button>
 
-                                <iframe id="certificateFrame-04"
-                                    src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-                                    title="Sample Certificate"></iframe>
+                                <script>
+                                    document.write(`<iframe id="certificateFrame-04"
+                                        src="${getCertificationById("04").certUrl || 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf'}"
+                                        title="Sample Certificate"></iframe>`)
+                                </script>
                             </div>
                         </div>
                         <div class="content-footer">
@@ -470,7 +481,7 @@
                 <hr>
                 <div class="modal-footer">
                     <button type="button" class="cancel-button" onclick="closeModal()">Cancel</button>
-                    <button type="button" class="save-button"onclick="onSaveChanges()">Save Changes</button>
+                    <button type="button" class="save-button" onclick="onSaveChanges()">Save Changes</button>
                 </div>
             </div>
         </div>

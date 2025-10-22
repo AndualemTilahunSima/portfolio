@@ -1,5 +1,5 @@
 :root {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: white;
 }
 
@@ -147,6 +147,10 @@ section {
     width: 20rem;
 }
 
+hr {
+    border: 1px solid #DEE9F2;
+}
+
 #work-experiance .tech-stack li {
     background-color: #eceff2;
     color: black;
@@ -201,7 +205,7 @@ section {
     padding: 0.5rem;
     border-radius: 0.5rem;
     margin-top: 3rem;
-    border: 1px solid grey;
+    border: 1px solid #f3f3f5;
     background-color: white;
     justify-content: space-between;
 }
@@ -246,7 +250,7 @@ footer {
 
 }
 
-hr {
+footer hr {
     border: 0.5px solid #324158;
 }
 
@@ -281,7 +285,7 @@ hr {
     border-radius: 0.75rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
     animation: fadeIn 0.3s ease;
-    width: 40rem;
+    width: 30rem;
     color: #314158;
 }
 

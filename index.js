@@ -128,3 +128,11 @@ function onFileChange(event) {
         videoPlayer.src = fileURL;
     }
 }
+
+// Close when clicking outside the modal content
+window.addEventListener("click", (e) => {
+    const modal = document.getElementById("myModalWrapper");
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+});
