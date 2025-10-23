@@ -126,8 +126,33 @@ function onFileChange(event) {
         const videoPlayer = document.getElementById('videoPlayer');
         const fileURL = URL.createObjectURL(file);
         videoPlayer.src = fileURL;
+        const videoContainer = document.getElementById('video-container');
+        videoContainer.style.display = "none";
+        const videoHeader = document.getElementById('video-header');
+        videoHeader.style.display = "flex";
+        const videoPlayerContainer = document.getElementById('video-player-container');
+        videoPlayerContainer.style.display = "block";
+        const replaceButton = document.getElementById('replace-button');
+        replaceButton.style.display = "block";
+        const videoName = document.getElementById('video-name');
+        videoName.innerHTML = file.name;
     }
 }
+
+function removeVideo() {
+    const videoPlayer = document.getElementById('videoPlayer');
+    videoPlayer.src = "";
+    const videoContainer = document.getElementById('video-container');
+    videoContainer.style.display = "flex";
+    const videoHeader = document.getElementById('video-header');
+    videoHeader.style.display = "none";
+    const videoPlayerContainer = document.getElementById('video-player-container');
+    videoPlayerContainer.style.display = "none";
+    const replaceButton = document.getElementById('replace-button');
+    replaceButton.style.display = "none";
+    const fileInput = document.getElementById('video-upload');
+    fileInput.value = "";
+}   
 
 // Close when clicking outside the modal content
 window.addEventListener("click", (e) => {

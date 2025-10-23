@@ -26,7 +26,9 @@
         </header>
         <nav>
             <div class="nav-profile">
-                <div class="logo"></div>
+                <div class="logo">
+                    <!-- <img src="dd"/> -->
+                </div>
             </div>
             <div class="profile-name">
                 <h3>Andualem Tilahun</h3>
@@ -78,8 +80,12 @@
                 <h2>Introduction Video</h2>
                 <hr />
                 <div class="content">
+                    <div class="content-header" id="video-header">
+                        <h4 id="video-name">Get to Know Me Better!</h4>
+                        <button type="button" class="remove-button" onclick="removeVideo()">Remove</button>
+                    </div>
                     <div class="content-body">
-                        <div class="video-container">
+                        <div class="video-container" id="video-container">
                             <span>Upload a short introduction video here.</span>
                             <span>MP4, WebM, or OGG format</span>
                             <div>
@@ -87,12 +93,13 @@
                                 <input id="video-upload" type="file" accept="video/*" hidden
                                     onchange="onFileChange(event)" />
                             </div>
-                            <div>
-                                <video id="videoPlayer" controls></video>
-                            </div>
+                        </div>
+                        <div class="video-player-container" id="video-player-container">
+                            <video id="videoPlayer" controls style="width: 100%;"></video>
                         </div>
                     </div>
                     <div class="content-footer">
+                        <button type="button" class="replace-button" id="replace-button">Replace Video</button>
                     </div>
                 </div>
             </div>
@@ -441,7 +448,7 @@
         <footer>
             <div class="footer-profile">
                 <h3>Andualem Tilahun</h3>
-                <span>Full Stack Developer specializing in building exceptional digital experiences.</span>
+                <p>Full Stack Developer specializing in building exceptional digital experiences.</p>
             </div>
             <hr />
             <div class="copyright">
