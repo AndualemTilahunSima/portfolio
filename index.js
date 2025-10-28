@@ -152,7 +152,7 @@ function removeVideo() {
     replaceButton.style.display = "none";
     const fileInput = document.getElementById('video-upload');
     fileInput.value = "";
-}   
+}
 
 // Close when clicking outside the modal content
 window.addEventListener("click", (e) => {
@@ -160,4 +160,19 @@ window.addEventListener("click", (e) => {
     if (e.target === modal) {
         modal.style.display = "none";
     }
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const body = document.body;
+    const themeSelect = document.getElementById('themeSelect');
+    const savedTheme = localStorage.getItem('theme') || 'default';
+    body.classList.add(savedTheme + '-theme');
+    themeSelect.value = savedTheme;
+    themeSelect.addEventListener('change', () => {
+        const selectedTheme = themeSelect.value;
+        body.classList.remove('default-theme', 'dark-theme');
+        body.classList.add(selectedTheme + '-theme');
+        localStorage.setItem('theme', selectedTheme);
+    })
 });
